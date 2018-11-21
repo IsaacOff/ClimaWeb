@@ -1,13 +1,12 @@
-<!Héctor Palí>
 <!DOCTYPE html>
-//hola dani
 <html>
 <head>
     <title>Interfaz de Climas</title>
 </head>
 <body>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!Para que acepte acentos>
-        <form name="formulario1" action="ServletClima">
+        
+        <form name="formulario1" method="post" >
                     
         <body style="background-color:LIGHTSKYBLUE;"> <!Color de fondo azul cadete>
         <!Logo FdeI><img src =  "https://lh3.googleusercontent.com/FMjbQiA_VDsaa3gHWdnnAfy4XhSx56ITPvlxjkhG-appdspfe6h__1-a9DIADhv3FZDSma6Mmp-Te5tHlg=w740-h220-rw" width="515" height="170">
@@ -44,7 +43,7 @@
         <br>
          
         
-        <center><select class="seleccion" name="Estado" onchange="cambia()"></center>
+        <center><select class="seleccion" name="cosa" onchange="cambia()"></center>
 				<option value="0">Seleccione el Estado
 				<option value="1">Aguascalientes
 				<option value="2">Baja California Norte
@@ -80,7 +79,7 @@
 				<option value="32">Zacatecas
         </select>
 			
-        <select class="seleccion" name="Municipio">
+        <select class="seleccion" name="opt">
             <option value="-">Seleccione el Municipio<br>
         </select>
 			
