@@ -46,10 +46,33 @@ public class ServletClima extends HttpServlet {
             out.println("<h1>" + request.getParameter("area") + "</h1><br>");
             out.println("<h1>" + request.getParameter("planta") + "</h1><br>");
             out.println("<h1>" + request.getParameter("fecha") + "</h1><br>");
-            out.println("<h1>" + request.getParameter("Estado") + "</h1><br>");
-            out.println("<h1>" + request.getParameter("Municipio") + "</h1><br>");
+            out.println("<h1>" + request.getParameter("cosa") + "</h1><br>");
+            out.println("<h1>" + request.getParameter("opt") + "</h1><br>");
             out.println("</body>");
             out.println("</html>");
+            
+        String municipio = request.getParameter("opt");
+        
+        if( "Ameca".equals(municipio) || 
+                "Campeche".equals(municipio) || "Cabo San Lucas".equals(municipio) ||
+                "La Piedad".equals(municipio) || "Tehuacan".equals(municipio) ||
+                "Cancun".equals(municipio) || "San Luis Potosi".equals(municipio) ||
+                "Tapachula".equals(municipio) ||"Zamora".equals(municipio) ||
+                "Rincon de Romos".equals(municipio) || "La Paz".equals(municipio) ||
+                "Saltillo".equals(municipio) || "Salvatierra".equals(municipio) ||
+                "Oaxaca".equals(municipio) || "Playa del Carmen".equals(municipio) ||
+                "Chetumal".equals(municipio) || "Tijuana".equals(municipio) ||
+                "Irapuato".equals(municipio) || "Tuxtla Gutierrez".equals(municipio) ||
+                "Chihuahua".equals(municipio) || "Manzanillo".equals(municipio) ||
+                "Progreso".equals(municipio) || "Tepic".equals(municipio) ||
+                "Ciudad Lerdo".equals(municipio) || "Puerto Vallarta".equals(municipio) ||
+                "Teziutlan".equals(municipio) || "Fresnillo".equals(municipio) ||
+                "Matamoros".equals(municipio) || "Tampico".equals(municipio) ||
+                "Colima".equals(municipio) || "Jerez de Garcia Salinas".equals(municipio)
+                || "Matehuala".equals(municipio)){
+            out.print("<h1>" + "Funciona tu puerquesa de 38"
+                    + "</h1><br>");
+        }
         }
     }
 
