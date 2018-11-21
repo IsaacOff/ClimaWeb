@@ -4,9 +4,8 @@
     <title>Interfaz de Climas</title>
 </head>
 <body>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> <!Para que acepte acentos>
-        
-        <form name="formulario1" method="post" >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!Para que acepte acentos>
+        <form name="formulario1" action="ServletClima">
                     
         <body style="background-color:LIGHTSKYBLUE;"> <!Color de fondo azul cadete>
         <!Logo FdeI><img src =  "https://lh3.googleusercontent.com/FMjbQiA_VDsaa3gHWdnnAfy4XhSx56ITPvlxjkhG-appdspfe6h__1-a9DIADhv3FZDSma6Mmp-Te5tHlg=w740-h220-rw" width="515" height="170">
@@ -42,7 +41,7 @@
         <center><input type="date" name="fecha" required><br></center>
         <br>
          
-        
+        <!Cosa es estado>
         <center><select class="seleccion" name="cosa" onchange="cambia()"></center>
 				<option value="0">Seleccione el Estado
 				<option value="1">Aguascalientes
@@ -78,7 +77,7 @@
 				<option value="31">Yucatán
 				<option value="32">Zacatecas
         </select>
-			
+	<!opt es municipio>		
         <select class="seleccion" name="opt">
             <option value="-">Seleccione el Municipio<br>
         </select>
@@ -92,7 +91,7 @@
 			var opt_2 = new Array ("Ensenada", "Mexicali", "Tijuana");
 			var opt_3 = new Array ("Cabo San Lucas", "La Paz", "Mulegé");
 			var opt_4 = new Array ("Campeche", "Champotón", "Ciudad del Carmen");
-                        var opt_5 = new Array ("Cd. México, Chapultepec", "Cd. México, Tacubaya");
+                        var opt_5 = new Array ("Cd. México, Chapultepec", "Cd. Mexico, Tacubaya");
 			var opt_6 = new Array ("Comitán", "Tapachula", "Tuxtla Gutiérrez");
 			var opt_7 = new Array ("Chihuahua", "Ciudad Juárez", "Hidalgo de Parral", "Ojinaga");
 			var opt_8 = new Array ("Monclova", "Nueva Rosita", "Piedras Negras", "Saltilla", "Torreón");
