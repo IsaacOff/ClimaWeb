@@ -1,16 +1,167 @@
+<!Héctor Palí>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+//hola dani
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>version 2</div>
+<head>
+    <title>Interfaz de Climas</title>
+</head>
+<body>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!Para que acepte acentos>
+        <form name="formulario1" action="ServletClima">
+                    
+        <body style="background-color:LIGHTSKYBLUE;"> <!Color de fondo azul cadete>
+        <!Logo FdeI><img src =  "https://lh3.googleusercontent.com/FMjbQiA_VDsaa3gHWdnnAfy4XhSx56ITPvlxjkhG-appdspfe6h__1-a9DIADhv3FZDSma6Mmp-Te5tHlg=w740-h220-rw" width="515" height="170">
+        <!Logo UAC><img align="right" src = "https://lh3.googleusercontent.com/Uj8YvIDgQhnxXTXZTJKhLtxIK6t0R5DH8WlhPMpWDS2q-3Zm-wvnh8T2V8gUVr_KDcfobQgmuGJDhSCtzknAP2wvRWOwdwN4FKbkFS9EQOSAciwwsXnEEk5OZg-ra1jc5DU-SB22KwRUFBWtOysMc3eeMztbZu6gFIflszR4ffNjf-oMTy6ZTeh16vT48zRk6k_TEvHCOXkojxgjuCTVFiALBiWht_EfdkhQ_6I8hjVE26BG0s-hOkdzIRjNw0NR_K28XiMVYi9-DAG_BAVII1rDUbU9EL27fJirpE6C00a32Q5F0rHoIHNJBCIDaF9IdvhAiIZghQ34XO0RYWCf3BqXXBx8qH4ekCSf_8SQBCcuowtm0-IGvQiuHyGK2lW5lw5wPqwvNSo0V-d6505lur2arRnoNLoxIAgJI7ZGaeTeddMBzqL0vhL2rlybaEFSSRTDv73VoizTyxjVZddrRuH0wE11BfF--gulRmnathCeJ4zwJXo89PTpxEi5GR2Z_-j6CpycT5ECSS6bpCBUFDrgUbaaFggiyYGWpn2qAhjicn025hwJaXtoUSOxTEEX7-ZaWRrgqn4uFTNr0SrzA0b69zAUqQtBllRor-VN1dBV2RTL4K_4d4MDvNJJVpOop-pViAR-sLZ0NcVem23TOmZg=w637-h636-no" width="250" height="175">
+
+        <center><h2>Favor de ingresar los datos de la empresa.</h2><br></center>
+
+        <center>Nombre de la Empresa:<br></center>
+        <center><input type="text" name="nombre" required><br></center>
+        <br>
+    
+        <center>Correo:<br></center>
+        <center><input type="email" name="correo" required><br></center>
+        <br>
+        
+        <center>Teléfono:<br></center>
+        <center><input type="text" name="telefono" required><br></center>
+        <br>
+    
+        <center>Dirección:<br></center>
+        <center><input type="text" name="direccion" required><br></center>
+        <br>
+        
+        <center>ID Área Climatizada:<br></center>
+        <center><input type="text" name="area" required><br></center>
+        <br>
+        
+        <center>Planta:<br></center>
+        <center><input type="text" name="planta" required><br></center>
+        <br>
+        
+        <center>Fecha:<br></center>
+        <center><input type="date" name="fecha" required><br></center>
+        <br>
+         
+        
+        <center><select class="seleccion" name="Estado" onchange="cambia()"></center>
+				<option value="0">Seleccione el Estado
+				<option value="1">Aguascalientes
+				<option value="2">Baja California Norte
+				<option value="3">Baja California Sur
+				<option value="4">Campeche
+                                <option value="5">Cd. de México
+				<option value="6">Chiapas
+				<option value="7">Chihuahua
+				<option value="8">Coahuila
+				<option value="9">Colima
+                                <option value="10">Durango
+				<option value="11">Guanajuato
+				<option value="12">Guerrero
+				<option value="13">Hidalgo
+				<option value="14">Jalisco
+                                <option value="15">México
+				<option value="16">Michoacán
+				<option value="17">Morelos
+				<option value="18">Nayarit
+				<option value="19">Nuevo León
+                                <option value="20">Oaxaca
+				<option value="21">Puebla
+				<option value="22">Querétaro
+				<option value="23">Quintana Roo
+				<option value="24">San Luis Potosí
+                                <option value="25">Sinaloa
+				<option value="26">Sonora
+				<option value="27">Tabasco
+				<option value="28">Tamaulipas
+				<option value="29">Tlaxcala
+                                <option value="30">Veracruz
+				<option value="31">Yucatán
+				<option value="32">Zacatecas
+        </select>
+			
+        <select class="seleccion" name="Municipio">
+            <option value="-">Seleccione el Municipio<br>
+        </select>
+			
+        </form>
+	
+        <script type="text/javascript">
+			//1) Definir Las Variables Correspondintes
+			var opt_0 = new Array ("Seleccione el Municipio");
+                        var opt_1 = new Array ("Aguascalientes", "Rincón de Romos");
+			var opt_2 = new Array ("Ensenada", "Mexicali", "Tijuana");
+			var opt_3 = new Array ("Cabo San Lucas", "La Paz", "Mulegé");
+			var opt_4 = new Array ("Campeche", "Champotón", "Ciudad del Carmen");
+                        var opt_5 = new Array ("Cd. México, Chapultepec", "Cd. México, Tacubaya");
+			var opt_6 = new Array ("Comitán", "Tapachula", "Tuxtla Gutiérrez");
+			var opt_7 = new Array ("Chihuahua", "Ciudad Juárez", "Hidalgo de Parral", "Ojinaga");
+			var opt_8 = new Array ("Monclova", "Nueva Rosita", "Piedras Negras", "Saltilla", "Torreón");
+                        var opt_9 = new Array ("Colima", "Manzanillo");
+			var opt_10 = new Array ("Ciudad Lerdo", "Durango", "Santiago Papasquiaro");
+			var opt_11 = new Array ("Celaya", "Guanajuato", "Irapuato", "León", "Salvatierra");
+			var opt_12 = new Array ("Acapulco", "Chilpancingo", "Ixtapa Zihuatanejo", "Taxco");
+                        var opt_13 = new Array ("Actopan", "Ixmiquilpan", "Pachuca", "Tulancingo");
+			var opt_14 = new Array ("Ameca", "Guadalajara", "Lagos de Moreno", "Puerto Vallarta");
+			var opt_15 = new Array ("Tenancingo", "Texcoco", "Toluca");
+			var opt_16 = new Array ("Apatzingán", "La Piedad", "Morelia", "Uruapan", "Zacapu", "Zamora");
+                        var opt_17 = new Array ("Cautla", "Cuernavaca", "Puente de Ixtla");
+			var opt_18 = new Array ("Acaponeta", "San Blas", "Tepic");
+			var opt_19 = new Array ("Campazos", "Montemorelos", "Monterrey");
+			var opt_20 = new Array ("Oaxaca", "Pochutla", "Salina Cruz");
+                        var opt_21 = new Array ("Huauchinango", "Puebla", "Tehuacán", "Texiutlán");
+			var opt_22 = new Array ("Querétaro", "San Juan del Río");
+			var opt_23 = new Array ("Cancún", "Chetumal", "Cozumel", "Playa del Carmen");
+			var opt_24 = new Array ("Matehuala", "Río Verde", "San Luis Potosí");
+                        var opt_25 = new Array ("Culiacán", "El Fuerte", "Guamuchil", "Mazatlán", "San Blas", "Topolobampo");
+			var opt_26 = new Array ("Altar", "Ciudad Obregón", "Guaymas", "Hermosillo", "Novojoa", "Nogales");
+			var opt_27 = new Array ("Álvaro Obregón", "Teapa", "Villahermosa");
+			var opt_28 = new Array ("Ciudad Victoria", "Matamoros", "Nuevo Laredo", "Reynosa", "Tampico");
+                        var opt_29 = new Array ("Tlaxcala");
+			var opt_30 = new Array ("Coatzacoalcos", "Jalapa", "Poza Rica", "Tuxpan", "Veracruz");
+			var opt_31 = new Array ("Mérida", "Progreso", "Valladolid");
+			var opt_32 = new Array ("Fresnillo", "Jerez de García Salinas", "Sombrerete", "Zacatecas");
+			// 2) crear una funcion que permita ejecutar el cambio dinamico
+			
+			function cambia(){
+				var cosa;
+				//Se toma el valor de la "cosa seleccionada"
+				cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].value;
+				//se chequea si la "cosa" está definida
+				if(cosa!==0){
+					//selecionamos las cosas Correctas
+					mis_opts=eval("opt_" + cosa);
+					//se calcula el numero de cosas
+					num_opts=mis_opts.length;
+					//marco el numero de opt en el select
+					document.formulario1.opt.length = num_opts;
+					//para cada opt del array, la pongo en el select
+					for(i=0; i<num_opts; i++){
+						document.formulario1.opt.options[i].value=mis_opts[i];
+						document.formulario1.opt.options[i].text=mis_opts[i];
+					}
+					}else{
+						//si no había ninguna opt seleccionada, elimino las cosas del select
+						document.formulario1.opt.length = 1;
+						//ponemos un guion en la unica opt que he dejado
+						document.formulario1.opt.options[0].value="-";
+						document.formulario1.opt.options[0].text="-";
+					}
+					//hacer un reset de las opts
+					document.formulario1.opt.options[0].selected = true;
+					
+				}
+			
+        </script>
+        <br>
+        <br><center><button type="submit"> Enviar </button><button type="reset"> Limpiar</button></center>
+        <br>
+    <a href="http://www.Twitter.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/SCWZ-Y1iqMOBLYln9BHiFK-5WEj1-4OUDVcvFToZJeRm7ocQ86SkO95kv1Ze5X1zpo9Mu_lXzEDI_ScKR_oB2oTgSapyEMWNsfW082aszUA1__tzHnc3Q_ld8rSN4QtPHHjL8H39KwOHMrGK-yi8bEkMKEaEOd0MsBEEsfuNBGLz_wzukdlZ8QUJDO8oNHmpCrkOkysodTCqavmb1HPIPqwD56xFnSgsVpJbOJ0-4HOhDtfSlHFGbM67go0ZhNbhMnkx4EM_UnGBqjZ1xxi2Bzr5y9GLk9VZ9AX2orDtW-FuRXOcO9h--Rz96JGslPJw5uktK69JkvsQypsUIFyIcbiWCPMLQdIYUzwe8OGvtfij8snh4EYb0UA-3zCTkC9nHf0FLFZuSqJSXK_ZDf6_WWCE-2R-NVZD3si99a8XBCvqzWNTuAD8QxiswoHlMexHMeTPHPcQpDwlIeoG2gQowlByY5iOwC4Ty8gwwjFJF2Yryek9_cd1Ck9NbWnOrVHL-HO4lqpWhAP5RYWXuRDw_JC7Pjf72HtWeRoaVjzXgN6-TDnHIOTv1l_kYtefIbVfC6d_ltqbd0xqTb3LQ5RqJQDI7RP8adLBjxAwK6Fdh8Wzbbkm7-Zv-ZvQWr47pbY=s636-no" width="70" height="70">
+    <a href="http://www.Instagram.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/ia1qbFvcnmOf4OCRpmr98bPBoEMwpxoJ1jcVZQMeB3vaExjADvJjUeLe31aDd0ER_5mAbaPiGJWk_3IObPdnuLaZsoTB_af3IcWY6Ppf6KQcD5EVHbr-pZqJrgxogFdlOapAN4WJ42xs_Ib9UmON3h_oWPyf1MavabOijyu6X3myGWLVqXadpMW6VyHU6cazfKYC2jbaft3siz2p1nyQhSFKUvf2JVLpPzUHxwnj8wqNejXgW6AOnCQYqKVU_URVfSz24ina0qlbdMwXXZ8zkxyVlGpy9uwzuSlY0MoWvoaamTyQLZERiLeIqW2jkRvq36zAAmu3OXJvo0kGTUA9pk3Bz4mpdcOG7MpDyN0NujQOf1Z9quHOkuoOzgdTaRUbnl3b2iwTSA59LAuYXFYoLuONxSNzmPqXsz9NBMCkhQLW8dLu5pFOwv-AUkzHum3idf5gBZmeMjbIErMXJEOs0ivMDKPwi3IcS2SiYHGBEO5dm5BHtFA5ndKmtiEWD2JRhl_uTlpXVP5aMxSUSATXO4c4_IFU-bmOrZ_3Hf0ochX7eYZoqdknZl_uV3wtP5POnN6tfbzAl4O94UmhRRCmYUZiOH6I71cQAC1kAciKhIsjWs-I9xWp5hXJXZpfRcY=s512-no" width="70" height="70">
+    <a href="http://www.Facebook.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/CPOMnwlFIMrpMk8JZ_1GnNLUIIQKR3kLFEZwPmEwz_Hn7RMZPgJ3yTJ-R9YgYYkPxo4qwcIIj2Sp6Lmk8C6hwlCL5XpNqdnlKAqiGSOE0HEy-8Q9KdsIhJ9QVJ6WuI-3ALo1k98cCqgaOmuqjRazSm9QUt1ofc9UJBfro98xiEb68NV3bgDWQpjO5E-TYkqHXf-N-EvQVlTkOK34BDt9BaV4fwXGVNB-bTWl20i-3h-Dt030jp6F0C1IrfuphKnqGQpCwVJXxMvwWXXe-NDuDKYaTn2WMd8D1J-kQJCDOT-cRM5nkTkwE4yn2YuhURSGJd484OtBvswl6eAUgccTD2EBBfsdnyfEK-sE6niz0HKNl8urL1_AdpGBtCqoTfYNpLrYQTqv8msnTdXoE-TGwjbypJsP7zShBhJDTMvnpvSCUVzMXmG8zlQ_n9R7-uHUj9SXA7Uf7LJBY6XihYAH3cF7_B7JooSq7e9VBV2qkh2uuCmzVhXw-Nid7qfnJaZoE-XWqANIcmYpU0IgCBmTFU2jhJrAdyyHbYxPR3tkYfDxfmDDE781ulwFmTqGXM07-wyBs9kOGHB1Xn0FmF12epgA33jiOag6TfZJO5YIbvI5kxqFUTRTj4xX3EFA3Qk=s512-no" width="70" height="70">
+
     </body>
 </html>
