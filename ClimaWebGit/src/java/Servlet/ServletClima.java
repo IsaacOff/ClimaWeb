@@ -51,29 +51,53 @@ public class ServletClima extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
             
-        String municipio = request.getParameter("opt");
+            String municipio = request.getParameter("opt");
+
+            if( "Ameca".equals(municipio) || 
+                    "Campeche".equals(municipio) || "Cabo San Lucas".equals(municipio) ||
+                    "La Piedad".equals(municipio) || "Tehuacan".equals(municipio) ||
+                    "Cancun".equals(municipio) || "San Luis Potosi".equals(municipio) ||
+                    "Tapachula".equals(municipio) ||"Zamora".equals(municipio) ||
+                    "Rincon de Romos".equals(municipio) || "La Paz".equals(municipio) ||
+                    "Saltillo".equals(municipio) || "Salvatierra".equals(municipio) ||
+                    "Oaxaca".equals(municipio) || "Playa del Carmen".equals(municipio) ||
+                    "Chetumal".equals(municipio) || "Tijuana".equals(municipio) ||
+                    "Irapuato".equals(municipio) || "Tuxtla Gutierrez".equals(municipio) ||
+                    "Chihuahua".equals(municipio) || "Manzanillo".equals(municipio) ||
+                    "Progreso".equals(municipio) || "Tepic".equals(municipio) ||
+                    "Ciudad Lerdo".equals(municipio) || "Puerto Vallarta".equals(municipio) ||
+                    "Teziutlan".equals(municipio) || "Fresnillo".equals(municipio) ||
+                    "Matamoros".equals(municipio) || "Tampico".equals(municipio) ||
+                    "Colima".equals(municipio) || "Jerez de Garcia Salinas".equals(municipio)
+                    || "Matehuala".equals(municipio)){
+                    out.print("<h1>" + "Funciona tu puerquesa de 38" + "</h1><br>");
+                    }
+            if ( "Toluca".equals(municipio) || "Zacatecas".equals(municipio) ||
+                    "Tlaxcala".equals(municipio) || "Puebla".equals(municipio) ||
+                    "Morelia".equals(municipio) || "Actopan".equals(municipio) ||
+                    "Pachuca".equals(municipio) || "Cuernavaca".equals(municipio) ||
+                    "Cd. Mexico, Tacubaya".equals(municipio) || "Mazatlan".equals(municipio) ||
+                    "Comitan".equals(municipio) || "Cd. Mexico, Chapultepec".equals(municipio) ||
+                    "Guanajuato".equals(municipio)) {
+                    out.print("<h1>" + "Temperatura exterior promedio anual °C son 32" + "</h1><br>");
+                    }
+            //Temperatura exterior promedio anual °C son 43
+            if ( "Ciudad Juarez".equals(municipio) || "Apatzingan".equals(municipio) ||
+                    "Guamuchil".equals(municipio) || "Lagos de Moreno".equals(municipio) ||
+                    "Piedras Negras".equals(municipio) || "Alvaro Obregon".equals(municipio) ||
+                    "Nueva Rosita".equals(municipio) || "Torreon".equals(municipio) ||
+                    "San Blas".equals(municipio) || "Hermosillo".equals(municipio) ||
+                    "Navojoa".equals(municipio) || "Nuevo Laredo".equals(municipio) ||
+                    "Reynosa".equals(municipio) || "Champoton".equals(municipio) ||
+                    "Guaymas".equals(municipio) || "Altar".equals(municipio) ||
+                    "El Fuerte".equals(municipio) || "Cuautla".equals(municipio) ||
+                    "Mexicali".equals(municipio) || "Ciudad Obregon".equals(municipio) ||
+                    "Ojinaga".equals(municipio)) {
+                    out.print("<h1>" + "Temperatura exterior promedio anual °C son 43" + "</h1><br>");
+                    }
+        }
         
-        if( "Ameca".equals(municipio) || 
-                "Campeche".equals(municipio) || "Cabo San Lucas".equals(municipio) ||
-                "La Piedad".equals(municipio) || "Tehuacan".equals(municipio) ||
-                "Cancun".equals(municipio) || "San Luis Potosi".equals(municipio) ||
-                "Tapachula".equals(municipio) ||"Zamora".equals(municipio) ||
-                "Rincon de Romos".equals(municipio) || "La Paz".equals(municipio) ||
-                "Saltillo".equals(municipio) || "Salvatierra".equals(municipio) ||
-                "Oaxaca".equals(municipio) || "Playa del Carmen".equals(municipio) ||
-                "Chetumal".equals(municipio) || "Tijuana".equals(municipio) ||
-                "Irapuato".equals(municipio) || "Tuxtla Gutierrez".equals(municipio) ||
-                "Chihuahua".equals(municipio) || "Manzanillo".equals(municipio) ||
-                "Progreso".equals(municipio) || "Tepic".equals(municipio) ||
-                "Ciudad Lerdo".equals(municipio) || "Puerto Vallarta".equals(municipio) ||
-                "Teziutlan".equals(municipio) || "Fresnillo".equals(municipio) ||
-                "Matamoros".equals(municipio) || "Tampico".equals(municipio) ||
-                "Colima".equals(municipio) || "Jerez de Garcia Salinas".equals(municipio)
-                || "Matehuala".equals(municipio)){
-            out.print("<h1>" + "Funciona tu puerquesa de 38"
-                    + "</h1><br>");
-        }
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
