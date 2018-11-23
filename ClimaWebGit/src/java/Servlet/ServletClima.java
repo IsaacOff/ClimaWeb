@@ -30,6 +30,27 @@ public class ServletClima extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        int var[]=new int[13];
+        int volumenResinto = 20;
+        int personaDentroResinto = 600;
+        int luzEquipoElectronico = 3;
+        /* 
+            Area de piso
+            Ventana lado sur o este
+            Ventana lado suroeste
+            ventana lado oeste
+            ventana lada noreste o suroeste
+            el resto de las ventanas
+            Dimension de la pared
+            Resto de las paredes exteriores
+            Todas las paredes adyacentes
+            techo con construccion
+            techo con clafo
+            techo con clafon y 50 mm
+            Aislamiento
+            Techado no aislado
+            */
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -53,6 +74,7 @@ public class ServletClima extends HttpServlet {
             
             String municipio = request.getParameter("opt");
 
+            //Temperatura exterior promedio anual °C son 38
             if( "Ameca".equals(municipio) || 
                     "Campeche".equals(municipio) || "Cabo San Lucas".equals(municipio) ||
                     "La Piedad".equals(municipio) || "Tehuacan".equals(municipio) ||
@@ -70,16 +92,41 @@ public class ServletClima extends HttpServlet {
                     "Matamoros".equals(municipio) || "Tampico".equals(municipio) ||
                     "Colima".equals(municipio) || "Jerez de Garcia Salinas".equals(municipio)
                     || "Matehuala".equals(municipio)){
-                    out.print("<h1>" + "Funciona tu puerquesa de 38" + "</h1><br>");
-                    }
-            if ( "Toluca".equals(municipio) || "Zacatecas".equals(municipio) ||
-                    "Tlaxcala".equals(municipio) || "Puebla".equals(municipio) ||
-                    "Morelia".equals(municipio) || "Actopan".equals(municipio) ||
-                    "Pachuca".equals(municipio) || "Cuernavaca".equals(municipio) ||
-                    "Cd. Mexico, Tacubaya".equals(municipio) || "Mazatlan".equals(municipio) ||
-                    "Comitan".equals(municipio) || "Cd. Mexico, Chapultepec".equals(municipio) ||
-                    "Guanajuato".equals(municipio)) {
-                    out.print("<h1>" + "Temperatura exterior promedio anual °C son 32" + "</h1><br>");
+            var[0]=52;
+            var[1]=540;
+            var[2]=920;
+            var[3]=1260;
+            var[4]=700;
+            var[5]=220;
+            var[6]=180;
+            var[7]=148;
+            var[8]=68;
+            var[9]=52;
+            var[10]=140;
+            var[11]=44;
+            var[12]=236;
+        }
+            //Temperatura exterior promedio anual °C son 32
+            if ("Toluca".equals(municipio) || "Zacatecas".equals(municipio) ||
+                "Tlaxcala".equals(municipio) || "Puebla".equals(municipio) ||
+                "Morelia".equals(municipio) || "Actopan".equals(municipio) ||
+                "Pachuca".equals(municipio) || "Cuernavaca".equals(municipio) ||
+                "Cd. Mexico, Tacubaya".equals(municipio) || "Mazatlan".equals(municipio) ||
+                "Comitan".equals(municipio) || "Cd. Mexico, Chapultepec".equals(municipio) ||
+                "Guanajuato".equals(municipio)) {
+            var[0]=24;
+            var[1]=460;
+            var[2]=840;
+            var[3]=1140;
+            var[4]=620;
+            var[5]=120;
+            var[6]=120;
+            var[7]=68;
+            var[8]=32;
+            var[9]=24;
+            var[10]=88;
+            var[11]=32;
+            var[12]=184;
                     }
             //Temperatura exterior promedio anual °C son 43
             if ( "Ciudad Juarez".equals(municipio) || "Apatzingan".equals(municipio) ||
@@ -93,7 +140,19 @@ public class ServletClima extends HttpServlet {
                     "El Fuerte".equals(municipio) || "Cuautla".equals(municipio) ||
                     "Mexicali".equals(municipio) || "Ciudad Obregon".equals(municipio) ||
                     "Ojinaga".equals(municipio)) {
-                    out.print("<h1>" + "Temperatura exterior promedio anual °C son 43" + "</h1><br>");
+            var[0]=100;
+            var[1]=660;
+            var[2]=1040;
+            var[3]=1380;
+            var[4]=820;
+            var[5]=340;
+            var[6]=228;
+            var[7]=228;
+            var[8]=100;
+            var[9]=100;
+            var[10]=180;
+            var[11]=56;
+            var[12]=288;
                     }
         }
         
