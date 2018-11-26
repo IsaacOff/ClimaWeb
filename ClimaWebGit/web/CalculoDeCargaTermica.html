@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cálculo de Carga Térmica</title>
+    </head>
+    <body>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!Para que acepte acentos>
+        
+        <form name="formulario1" action="ServletClima" method="post">
+                    
+        <body style="background-color:LIGHTSKYBLUE;"> <!Color de fondo azul cadete>
+        <!Logo FdeI><img src =  "https://lh3.googleusercontent.com/FMjbQiA_VDsaa3gHWdnnAfy4XhSx56ITPvlxjkhG-appdspfe6h__1-a9DIADhv3FZDSma6Mmp-Te5tHlg=w740-h220-rw" width="515" height="170">
+        <!Logo UAC><img align="right" src = "https://lh3.googleusercontent.com/Uj8YvIDgQhnxXTXZTJKhLtxIK6t0R5DH8WlhPMpWDS2q-3Zm-wvnh8T2V8gUVr_KDcfobQgmuGJDhSCtzknAP2wvRWOwdwN4FKbkFS9EQOSAciwwsXnEEk5OZg-ra1jc5DU-SB22KwRUFBWtOysMc3eeMztbZu6gFIflszR4ffNjf-oMTy6ZTeh16vT48zRk6k_TEvHCOXkojxgjuCTVFiALBiWht_EfdkhQ_6I8hjVE26BG0s-hOkdzIRjNw0NR_K28XiMVYi9-DAG_BAVII1rDUbU9EL27fJirpE6C00a32Q5F0rHoIHNJBCIDaF9IdvhAiIZghQ34XO0RYWCf3BqXXBx8qH4ekCSf_8SQBCcuowtm0-IGvQiuHyGK2lW5lw5wPqwvNSo0V-d6505lur2arRnoNLoxIAgJI7ZGaeTeddMBzqL0vhL2rlybaEFSSRTDv73VoizTyxjVZddrRuH0wE11BfF--gulRmnathCeJ4zwJXo89PTpxEi5GR2Z_-j6CpycT5ECSS6bpCBUFDrgUbaaFggiyYGWpn2qAhjicn025hwJaXtoUSOxTEEX7-ZaWRrgqn4uFTNr0SrzA0b69zAUqQtBllRor-VN1dBV2RTL4K_4d4MDvNJJVpOop-pViAR-sLZ0NcVem23TOmZg=w637-h636-no" width="250" height="175">
+   
+        <center><h2>Favor de ingresar los siguientes datos (en metros).</h2><br></center>
+        
+        <center><table class="egt"></center>
+
+            <tr>    
+    <th scope="row">Número</th>
+    <th>Descripción</th>
+    <th>Alto</th>
+    <th>Ancho</th>
+    <th>Fondo</th>
+            </tr>
+
+            <tr>
+    <th>1</th>
+    <td>Área del Piso</td>
+    <td>N/A</td>
+    <td><input type="text" name="1" required></td>
+    <td><input type="text" name="2" required></td>
+            </tr>
+
+            <tr>
+    <th>2</th>
+    <td>Volumen del Recinto</td>
+    <td><input type="text" name="3" required></td>
+    <td><input type="text" name="4" required></td>
+    <td><input type="text" name="5" required></td>
+            </tr>
+
+            <tr>
+    <th></th>
+    <center><th colspan="4">ÁREA DE VENTANA EXPUESTA AL SOL (Utilice la ventana que arroje el mayor resultado)</th></center>
+            </tr>
+            
+            <tr>
+    <th rowspan="4">3</th>
+    <td>Ventana Lado Sur o Este</td>
+    <td><input type="text" name="6" required></td>
+    <td><input type="text" name="7" required></td>
+    <td>N/A</td>
+            </tr>
+    
+            <tr>
+    <td>Ventana Lado Suroeste</td>
+    <td><input type="text" name="8" required></td>
+    <td><input type="text" name="9" required></td>
+    <td>N/A</td>
+            </tr>
+
+            <tr>
+    <td>Ventana Lado Oeste</td>
+    <td><input type="text" name="10" required></td>
+    <td><input type="text" name="11" required></td>
+    <td>N/A</td>
+            </tr>
+
+            <tr>
+    <td>Ventana Noreste o Sureste</td>
+    <td><input type="text" name="12" required></td>
+    <td><input type="text" name="13" required></td>
+    <td>N/A</td>
+            </tr>
+
+            <tr>
+    <th>4</th>
+    <td>Área del Resto de las Ventanas</td>
+    <td><input type="text" name="14" required></td>
+    <td><input type="text" name="15" required></td>
+    <td>N/A</td>
+            </tr>
+
+            <tr>
+    <th>5</th>
+    <td>Área de la Pared Utilizada en el Punto 3 (no incluir dimensión de la ventana)</td>
+    <td colspan="3"><input type="text" name="16" required></td>
+            </tr>
+  
+            <tr>
+    <th>6</th>
+    <td>Área del Resto de las Paredes Exteriores (no incluir dimensión de la ventana)</td>
+    <td colspan="3"><input type="text" name="17" required></td>
+            </tr>
+
+            <tr>
+    <th>7</th>
+    <td>Área de Todas las Paredes Adyacentes a un Recinto No Acondicionado</td>
+    <td colspan="3"><input type="text" name="18" required></td>
+            </tr>
+
+            <tr>
+    <th rowspan="4">8</th>
+    <td>Techo con Construcción Arriba Sin Acondicionar</td>
+    <td>N/A</td>
+    <td><input type="text" name="19" required></td>
+    <td><input type="text" name="20" required></td>
+            </tr>
+    
+            <tr>
+    <td>Techo con Plafón No Aislado</td>
+    <td>N/A</td>
+    <td><input type="text" name="21" required></td>
+    <td><input type="text" name="22" required></td>
+            </tr>
+
+            <tr>
+    <td>Techado con Plafón y 50 mm. (2") o Más de Aislamiento</td>
+    <td>N/A</td>
+    <td><input type="text" name="23" required></td>
+    <td><input type="text" name="24" required></td>
+            </tr>
+
+            <tr>
+    <td>Techado No Aislado</td>
+    <td>N/A</td>
+    <td><input type="text" name="25" required></td>
+    <td><input type="text" name="26" required></td>
+            </tr>
+            
+            <tr>
+    <th>9</th>
+    <td>Número de Personas Dentro del Recinto</td>
+    <td colspan="3"><input type="text" name="27" required></td>
+            </tr>
+
+            <tr>
+    <th>10</th>
+    <td>Luz y Equipos Eléctricos en Uso (WATTS)</td>
+    <td colspan="3"><input type="text" name="28" required></td>
+            </tr>
+  
+        </table>
+            
+            <br>
+        <br><center><button type="submit"> Enviar </button><button type="reset"> Limpiar</button></center>
+        <br>
+    <a href="http://www.Twitter.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/SCWZ-Y1iqMOBLYln9BHiFK-5WEj1-4OUDVcvFToZJeRm7ocQ86SkO95kv1Ze5X1zpo9Mu_lXzEDI_ScKR_oB2oTgSapyEMWNsfW082aszUA1__tzHnc3Q_ld8rSN4QtPHHjL8H39KwOHMrGK-yi8bEkMKEaEOd0MsBEEsfuNBGLz_wzukdlZ8QUJDO8oNHmpCrkOkysodTCqavmb1HPIPqwD56xFnSgsVpJbOJ0-4HOhDtfSlHFGbM67go0ZhNbhMnkx4EM_UnGBqjZ1xxi2Bzr5y9GLk9VZ9AX2orDtW-FuRXOcO9h--Rz96JGslPJw5uktK69JkvsQypsUIFyIcbiWCPMLQdIYUzwe8OGvtfij8snh4EYb0UA-3zCTkC9nHf0FLFZuSqJSXK_ZDf6_WWCE-2R-NVZD3si99a8XBCvqzWNTuAD8QxiswoHlMexHMeTPHPcQpDwlIeoG2gQowlByY5iOwC4Ty8gwwjFJF2Yryek9_cd1Ck9NbWnOrVHL-HO4lqpWhAP5RYWXuRDw_JC7Pjf72HtWeRoaVjzXgN6-TDnHIOTv1l_kYtefIbVfC6d_ltqbd0xqTb3LQ5RqJQDI7RP8adLBjxAwK6Fdh8Wzbbkm7-Zv-ZvQWr47pbY=s636-no" width="70" height="70">
+    <a href="http://www.Instagram.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/ia1qbFvcnmOf4OCRpmr98bPBoEMwpxoJ1jcVZQMeB3vaExjADvJjUeLe31aDd0ER_5mAbaPiGJWk_3IObPdnuLaZsoTB_af3IcWY6Ppf6KQcD5EVHbr-pZqJrgxogFdlOapAN4WJ42xs_Ib9UmON3h_oWPyf1MavabOijyu6X3myGWLVqXadpMW6VyHU6cazfKYC2jbaft3siz2p1nyQhSFKUvf2JVLpPzUHxwnj8wqNejXgW6AOnCQYqKVU_URVfSz24ina0qlbdMwXXZ8zkxyVlGpy9uwzuSlY0MoWvoaamTyQLZERiLeIqW2jkRvq36zAAmu3OXJvo0kGTUA9pk3Bz4mpdcOG7MpDyN0NujQOf1Z9quHOkuoOzgdTaRUbnl3b2iwTSA59LAuYXFYoLuONxSNzmPqXsz9NBMCkhQLW8dLu5pFOwv-AUkzHum3idf5gBZmeMjbIErMXJEOs0ivMDKPwi3IcS2SiYHGBEO5dm5BHtFA5ndKmtiEWD2JRhl_uTlpXVP5aMxSUSATXO4c4_IFU-bmOrZ_3Hf0ochX7eYZoqdknZl_uV3wtP5POnN6tfbzAl4O94UmhRRCmYUZiOH6I71cQAC1kAciKhIsjWs-I9xWp5hXJXZpfRcY=s512-no" width="70" height="70">
+    <a href="http://www.Facebook.com/HectorPali" target="_blank">
+        <img src="https://lh3.googleusercontent.com/CPOMnwlFIMrpMk8JZ_1GnNLUIIQKR3kLFEZwPmEwz_Hn7RMZPgJ3yTJ-R9YgYYkPxo4qwcIIj2Sp6Lmk8C6hwlCL5XpNqdnlKAqiGSOE0HEy-8Q9KdsIhJ9QVJ6WuI-3ALo1k98cCqgaOmuqjRazSm9QUt1ofc9UJBfro98xiEb68NV3bgDWQpjO5E-TYkqHXf-N-EvQVlTkOK34BDt9BaV4fwXGVNB-bTWl20i-3h-Dt030jp6F0C1IrfuphKnqGQpCwVJXxMvwWXXe-NDuDKYaTn2WMd8D1J-kQJCDOT-cRM5nkTkwE4yn2YuhURSGJd484OtBvswl6eAUgccTD2EBBfsdnyfEK-sE6niz0HKNl8urL1_AdpGBtCqoTfYNpLrYQTqv8msnTdXoE-TGwjbypJsP7zShBhJDTMvnpvSCUVzMXmG8zlQ_n9R7-uHUj9SXA7Uf7LJBY6XihYAH3cF7_B7JooSq7e9VBV2qkh2uuCmzVhXw-Nid7qfnJaZoE-XWqANIcmYpU0IgCBmTFU2jhJrAdyyHbYxPR3tkYfDxfmDDE781ulwFmTqGXM07-wyBs9kOGHB1Xn0FmF12epgA33jiOag6TfZJO5YIbvI5kxqFUTRTj4xX3EFA3Qk=s512-no" width="70" height="70">
+
+    </body>
+</html>
