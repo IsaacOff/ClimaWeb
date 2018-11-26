@@ -123,7 +123,8 @@ public class ServletClima extends HttpServlet {
         tnaFondo=Float.parseFloat(request.getParameter("26"));
         npar=Float.parseFloat(request.getParameter("27"));
         leens=Float.parseFloat(request.getParameter("28"));
-            
+        
+            System.out.println("el resultado es: "+vloAlto);
             //String municipio = request.getParameter("opt");
             String municipio = "Campeche";
 
@@ -288,17 +289,8 @@ public class ServletClima extends HttpServlet {
                 System.out.println(respuesta[x]);
                 totalBTU=totalBTU+respuesta[x];
             }
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletClima</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>" + request.getParameter("nombre") + "</h1> <br>");
-            out.println("<h1>" + "El total de los BTU a utilizar es "+ totalBTU + "</h1> <br>");
-            out.println("</body>");
-            out.println("</html>");
-            
+            request.setAttribute("ResultadoBTU", totalBTU);
+            request.getRequestDispatcher("/ResponseJSP.jsp").forward(request,response);
         }  
     }
 
