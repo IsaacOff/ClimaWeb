@@ -294,6 +294,7 @@ public class ServletClima extends HttpServlet {
             out.println("<title>Servlet ServletClima</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<h1>" + request.getParameter("nombre") + "</h1> <br>");
             out.println("<h1>" + "El total de los BTU a utilizar es "+ totalBTU + "</h1> <br>");
             out.println("</body>");
             out.println("</html>");
