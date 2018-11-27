@@ -6,7 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-String variable = String.valueOf(request.getAttribute("ResultadoBTU"));  
+String BTU = String.valueOf(request.getAttribute("ResultadoBTU")); 
+String Muni = String.valueOf(request.getAttribute("Municipio")); 
 %>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,7 @@ String variable = String.valueOf(request.getAttribute("ResultadoBTU"));
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World! <%= variable%></h1>
+        <h1>Los BTU que se necesitan son: <%=BTU%></h1>
+        <h1>El municipio es: <%= Muni%></h1>
     </body>
 </html>

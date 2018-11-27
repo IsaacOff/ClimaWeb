@@ -124,9 +124,8 @@ public class ServletClima extends HttpServlet {
         npar=Float.parseFloat(request.getParameter("27"));
         leens=Float.parseFloat(request.getParameter("28"));
         
-            System.out.println("el resultado es: "+vloAlto);
             //String municipio = request.getParameter("opt");
-            String municipio = "Campeche";
+            String municipio = request.getParameter("opt");
 
             
             //Temperatura exterior promedio anual °C son 32
@@ -290,6 +289,7 @@ public class ServletClima extends HttpServlet {
                 totalBTU=totalBTU+respuesta[x];
             }
             request.setAttribute("ResultadoBTU", totalBTU);
+            request.setAttribute("Municipio", municipio);
             request.getRequestDispatcher("/ResponseJSP.jsp").forward(request,response);
         }  
     }
