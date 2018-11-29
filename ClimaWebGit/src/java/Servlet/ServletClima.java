@@ -288,6 +288,8 @@ public class ServletClima extends HttpServlet {
             respuesta[14]= npar*personaDentroResinto;
             respuesta[15]= leens*luzEquipoElectronico;
             
+            marcador=0;
+            
             for(int x=0; x<16;x++){
                 System.out.println(respuesta[x]);
                 totalBTU=totalBTU+respuesta[x];
@@ -327,13 +329,18 @@ public class ServletClima extends HttpServlet {
             
             if(totalBTU>24000){ 
                 try {
+                    System.out.println("aqui estoy perro");
                     BD.getRequest(request);
                     BD con=new BD();
                     con.BD1();
                     con.consulta_36btus();
+                   
                 } catch (Exception e) {
                 }
             }
+            
+            System.out.println("aqui tambien");
+            System.out.println(marcador);
             
             
             request.setAttribute("NumeroTotal", marcador);
@@ -356,11 +363,13 @@ public class ServletClima extends HttpServlet {
      * @param seer
      */
     public static void getDatos( HttpServletRequest request,String capacidad, String marca, String modelo, String voltaje, String corriente,String refrigerante, String potencia_electrica, String seer){
+        System.out.println("entre a officer");
         request.setAttribute(Integer.toString(marcador), capacidad);
         marcador++;
         request.setAttribute(Integer.toString(marcador), marca);
         marcador++;
         request.setAttribute(Integer.toString(marcador), modelo);
+        System.out.println(modelo);
         marcador++;
         request.setAttribute(Integer.toString(marcador), voltaje);
         marcador++;

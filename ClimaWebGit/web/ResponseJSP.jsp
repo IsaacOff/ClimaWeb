@@ -37,8 +37,7 @@ String total=String.valueOf(request.getAttribute("NumeroTotal"));
 
             <tr>
             <!Encabezados en negrita con th>
-    <th scope="row">Capacidad (BTU/h)</th>
-    <th>Capacidad</th>
+    <th scope="row">Capacidad</th>
     <th>Marca</th>
     <th>Modelo</th>
     <th>Voltaje</th>
@@ -50,16 +49,25 @@ String total=String.valueOf(request.getAttribute("NumeroTotal"));
             
 <%
     int x=0;
-while(Integer.parseInt(total)<x){
-   out.println("<tr>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
-   out.println("<td>"+ String.valueOf(x)+"</td>");
+while(Integer.parseInt(total)>x){
+    System.out.println(total);
+    System.out.println(x);
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
+   out.println("<td>"+ request.getAttribute(Integer.toString(x))+"</td>");
+   x++;
    out.println("</tr>");
 }
 %>   
