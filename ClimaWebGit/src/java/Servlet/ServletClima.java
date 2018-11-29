@@ -28,6 +28,9 @@ public class ServletClima extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+        static int marcador=0;
+        
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int var[]=new int[13];
@@ -123,6 +126,7 @@ public class ServletClima extends HttpServlet {
         tnaFondo=Float.parseFloat(request.getParameter("26"));
         npar=Float.parseFloat(request.getParameter("27"));
         leens=Float.parseFloat(request.getParameter("28"));
+        
         
             //String municipio = request.getParameter("opt");
             String municipio = request.getParameter("opt");
@@ -288,12 +292,87 @@ public class ServletClima extends HttpServlet {
                 System.out.println(respuesta[x]);
                 totalBTU=totalBTU+respuesta[x];
             }
+            
+            
+            if(totalBTU>1 && totalBTU<12001){ 
+                try {
+                    BD.getRequest(request);
+                    BD con=new BD();
+                    con.BD1();
+                    con.consulta_12btus();
+                } catch (Exception e) {
+                }
+            }
+            
+            if(totalBTU>12000 && totalBTU<18001){ 
+                try {
+                    BD.getRequest(request);
+                    BD con=new BD();
+                    con.BD1();
+                    con.consulta_18btus();
+                } catch (Exception e) {
+                }
+            }
+           
+            
+             if(totalBTU>18000 && totalBTU<24001){ 
+                try {
+                    BD.getRequest(request);
+                    BD con=new BD();
+                    con.BD1();
+                    con.consulta_24btus();
+                } catch (Exception e) {
+                }
+            }
+            
+            if(totalBTU>24000){ 
+                try {
+                    BD.getRequest(request);
+                    BD con=new BD();
+                    con.BD1();
+                    con.consulta_36btus();
+                } catch (Exception e) {
+                }
+            }
+            
+            
+            request.setAttribute("NumeroTotal", marcador);
             request.setAttribute("ResultadoBTU", totalBTU);
             request.setAttribute("Municipio", municipio);
             request.getRequestDispatcher("/ResponseJSP.jsp").forward(request,response);
         }  
     }
 
+    /**
+     *
+     * @param request
+     * @param capacidad
+     * @param marca
+     * @param modelo
+     * @param voltaje
+     * @param corriente
+     * @param refrigerante
+     * @param potencia_electrica
+     * @param seer
+     */
+    public static void getDatos( HttpServletRequest request,String capacidad, String marca, String modelo, String voltaje, String corriente,String refrigerante, String potencia_electrica, String seer){
+        request.setAttribute(Integer.toString(marcador), capacidad);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), marca);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), modelo);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), voltaje);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), corriente);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), refrigerante);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), potencia_electrica);
+        marcador++;
+        request.setAttribute(Integer.toString(marcador), seer);
+        marcador++;
+    }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
